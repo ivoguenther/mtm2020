@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Mainframe User Details</h1>
+    <p th:text="'UserName: ' + ${user.username}" />
+    <p th:text="'UID: ' + ${user.uid}" />
+    <p th:text="'GroupName: ' + ${user.groupname}" />
+    <p th:text="'GID: ' + ${user.gid}" />
+    <p th:text="'User Creation Date: ' + ${zuser.created}" />
+    <p th:text="'Password Definition Date: ' + ${zuser.passdate}" />
+    <p th:text="'Password Intervall: ' + ${zuser.passinterval}" />
+    <p th:text="'Last User Access: ' + ${zuser.lastaccess}" />
+    <p th:text="'User Authorizations: ' + ${zuser.authorizations}" />
+    <p th:text="'Additional Info: ' + ${zuser.installdata}" />
+
+    <!-- <h1>Change PW</h1>
+    <form action="#" th:action="@{/changepw}" th:object="${password}" method="post">
+    	<input type="hidden" th:name="oldPassword" th:id="oldPassword" th:value="${credentials.password}" /></p>
+        <p>New Password: <input type="text" th:field="*{newPassword}" /></p>
+        <input type="hidden" th:name="username" th:id="username" th:value="${user.username}" />
+        <p><input type="submit" value="Change Password" /></p>
+    </form> -->
+
+    <a href="/logoff">Logoff</a>
+
+</body>
+</html>
